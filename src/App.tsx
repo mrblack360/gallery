@@ -1,3 +1,4 @@
+import Alert from "./Alert";
 import ListGroup from "./ListGroup";
 import Message from "./Message";
 
@@ -13,6 +14,9 @@ function App() {
         heading="Cities"
         onSelectItem={handleSelectItem}
       />
+      <Alert>
+        Woyoooooo <strong>It's another child node</strong>
+      </Alert>
     </div>
   );
 }
