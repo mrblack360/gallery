@@ -5,7 +5,10 @@ function App() {
   return (
     <div>
       <Message />
-      <ListGroup />
+      <ListGroup
+        items={["Dar", "Morogoro", "Dodoma", "Iringa"]}
+        heading="Cities"
+      />
     </div>
   );
 }
