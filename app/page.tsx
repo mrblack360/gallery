@@ -1,3 +1,4 @@
+import Feed from "@components/Feed";
 import React from "react";
 
 const page = () => {
@@ -11,6 +12,7 @@ const page = () => {
       <p className="text-center">
         I won't tell you everything guys, but there will be signs and images!
       </p>
+      <Feed />
     </section>
   );
 };
