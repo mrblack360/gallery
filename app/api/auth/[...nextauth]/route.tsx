@@ -19,9 +19,9 @@ const handler = NextAuth({
     async signIn({ account, profile, user, credentials }: any) {
       try {
         await connectToDB();
-        console.log("Tulifika");
         const userExists = await User.findOne({ email: profile.email });
-        console.log("Tukafika");
+        console.log(userExists);
+
         if (!userExists) {
           await User.create({
             email: profile.email,
