@@ -11,7 +11,7 @@ const CreatePost = () => {
   const [submitting, setSubmitting] = useState(false);
 
   const [post, setPost] = useState({
-    description: "",
+    desc: "",
     tag: "",
   });
 
@@ -22,7 +22,7 @@ const CreatePost = () => {
       const response = await fetch("/api/post/new", {
         method: "POST",
         body: JSON.stringify({
-          description: post.description,
+          description: post.desc,
           tag: post.tag,
           userID: session?.user?.id,
         }),

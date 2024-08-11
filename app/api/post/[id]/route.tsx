@@ -33,7 +33,7 @@ export const PATCH = async (
     }
 
     // Update the post with new data
-    existingPost.post = post;
+    existingPost.post_description = post;
     existingPost.tag = tag;
 
     await existingPost.save();
