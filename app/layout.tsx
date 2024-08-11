@@ -6,7 +6,7 @@ import { Suspense } from "react";
 
 export const metadata = {
   title: "Gallery",
-  description: "Gallery",
+  description: "Maswi's Next Js playground, gallery",
 };
 const RootLayout = ({ children }: any) => {
   return (
