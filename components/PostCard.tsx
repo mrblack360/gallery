@@ -6,7 +6,7 @@ import { usePathname, useRouter } from "next/navigation";
 import React, { useState } from "react";
 
 const PostCard = ({ post, handleEdit, handleDelete, handleTagClick }: any) => {
-  const { data: session } = useSession();
+  const { data: session }: any = useSession();
   const pathName = usePathname();
   const router = useRouter();
 
@@ -16,7 +16,7 @@ const PostCard = ({ post, handleEdit, handleDelete, handleTagClick }: any) => {
     if (post.creator._id === session?.user?.email)
       return router.push("/profile");
 
-    router.push(`/profile/${post.creator._id}?name=${post.creator.username}`);
+    router.push(`/profile/${post.creator._id}?name=${post.creator.email}`);
   };
 
   const handleCopy = () => {
