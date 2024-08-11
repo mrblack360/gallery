@@ -7,7 +7,7 @@ import React, { useEffect, useState } from "react";
 
 const Nav = () => {
   const { data: session } = useSession();
-  const [providers, setProviders] = useState("");
+  const [providers, setProviders] = useState<any>("");
   useEffect(() => {
     const _setProviders = async () => {
       const response = await getProviders();

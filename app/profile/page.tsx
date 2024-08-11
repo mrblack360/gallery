@@ -8,7 +8,7 @@ import Profile from "@components/Profile";
 
 const MyProfile = () => {
   const router = useRouter();
-  const { data: session } = useSession();
+  const { data: session }: any = useSession();
 
   const [myPosts, setMyPosts] = useState([]);
 
@@ -36,7 +36,9 @@ const MyProfile = () => {
           method: "DELETE",
         });
 
-        const filteredPosts = myPosts.filter((item) => item._id !== post._id);
+        const filteredPosts = myPosts.filter(
+          (item: any) => item._id !== post._id
+        );
 
         setMyPosts(filteredPosts);
       } catch (error) {

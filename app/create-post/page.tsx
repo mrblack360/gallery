@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 
 const CreatePost = () => {
   const router = useRouter();
-  const { data: session } = useSession();
+  const { data: session }: any = useSession();
   const [submitting, setSubmitting] = useState(false);
 
   const [post, setPost] = useState({

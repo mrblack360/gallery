@@ -27,7 +27,7 @@ const UpdatePost = () => {
     if (postId) getPostDetails();
   }, [postId]);
 
-  const updatePost = async (e: any) => {
+  const _updatePost = async (e: any) => {
     e.preventDefault();
     setIsSubmitting(true);
 
@@ -58,7 +58,7 @@ const UpdatePost = () => {
       post={post}
       setPost={setPost}
       submitting={submitting}
-      handleSubmit={updatePost}
+      handleSubmit={_updatePost}
     />
   );
 };

@@ -18,7 +18,7 @@ const Feed = () => {
 
   // Search states
   const [searchText, setSearchText] = useState("");
-  const [searchTimeout, setSearchTimeout] = useState(null);
+  const [searchTimeout, setSearchTimeout] = useState(0);
   const [searchedResults, setSearchedResults] = useState([]);
 
   const fetchPosts = async () => {
@@ -48,7 +48,7 @@ const Feed = () => {
 
     // debounce method
     setSearchTimeout(
-      setTimeout(() => {
+      window.setTimeout(() => {
         const searchResult = filterPosts(e.target.value);
         setSearchedResults(searchResult);
       }, 500)
