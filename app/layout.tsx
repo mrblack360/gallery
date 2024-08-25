@@ -3,6 +3,7 @@ import Provider from "@components/Provider";
 
 import "@styles/globals.css";
 import { Suspense } from "react";
+import Providers from "./store/provider";
 
 export const metadata = {
   title: "Gallery",
@@ -13,14 +14,16 @@ const RootLayout = ({ children }: any) => {
     <html lang="en">
       <body>
         <Provider>
-          <div className="main">
-            <div className="gradient"></div>
-          </div>
+          <Providers>
+            <div className="main">
+              <div className="gradient"></div>
+            </div>
 
-          <main className="app">
-            <Nav />
-            <Suspense>{children}</Suspense>
-          </main>
+            <main className="app">
+              <Nav />
+              <Suspense>{children}</Suspense>
+            </main>
+          </Providers>
         </Provider>
       </body>
     </html>

@@ -1,3 +1,4 @@
+import Counter from "@components/Counter";
 import Feed from "@components/Feed";
 import React from "react";
 
@@ -13,6 +14,7 @@ const page = () => {
         I won't tell you everything guys, but there will be signs and images!
       </p>
       <Feed />
+      <Counter />
     </section>
   );
 };
